@@ -1,0 +1,50 @@
+﻿l_english:
+ two_canadas.1.t:0 "A Tale of Two Canadas"
+ two_canadas.1.a:0 "A true north, strong and free."
+ two_canadas.1.x:0 "[ROOT.GetCountry.GetName] will side with the Pro-Republican forces."
+ two_canadas.1.b:0 "Long live the [ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]!"
+ two_canadas.1.y.0 "[ROOT.GetCountry.GetName] will side with the British Loyalists. This "
+ two_canadas.1.d:0 "Smloop"
+ two_canadas.1.f:0 "Smlopp"
+ 
+ 
+ two_canadas.9.t:0 "Independence Now!"
+ two_canadas.9.a:0 "Our rebellion grows."
+ two_canadas.9.b:0 "There is no time for this! Independence now!"
+
+
+ two_canadas.2.t:0 "For the Republic!"
+ two_canadas.2.a:0 "Not so hasty. We need to gather more support."
+ two_canadas.2.b:0 "Cry 'Havoc!'"
+ two_canadas.2.d:0 "The embers of rebellion are burning hot in [ROOT.GetCountry.GetName]. Small conflicts are breaking out across the colony, and the word 'republic' is shouted more often than whispered."
+ two_canadas.2.f:0 ""I heard they seized Navy Island."\n"Navy Island? Is that even ours?""
+
+ two_canadas.4.f:0 "Not every Canadian is ready to lay down their life for the dream of a republic.\n\n"So what, he's a lawyer? How's a lawyer supposed to lead a bunch of farmers to war?"
+
+ two_canadas.3.t:0 "Pour le Republique!"
+ two_canadas.3.a:0 "Not so hasty. We need to gather more support."
+ two_canadas.3.b:0 "Vive la restistance!"
+
+
+ two_canadas.2.q:0 ""The constitution of a country is not the act of its government, nor of any distant authority, but of the people constituting a government suited to their necessities — a constitution contains the principles on which the government shall be established.""
+
+
+ je_two_canadas:0 "A Tale of Two Canadas"
+ je_two_canadas_reason:0 "Inspired by revolutions across the Americas, the British subjects in Upper and Lower Canada dream of a free Canadian republic with responsible governance. These Pro-Republican groups are prepared to fight for their freedom, while the redcoat Loyalists look to tighten their grip on the young colonies.\n\nIn Lower Canada, a coalition of landed French *seigneurs* and British merchants known as the Chateau Clique offer a traditional British oppression, opposed by the Intelligentsia and Louis-Joseph Papineau's Patriote Party, who seek aid wherever they can find it.\n\nFurther up the St. Lawrence, the Family Compact rules Upper Canada's York legislature with an iron fist. Their increasingly dominant control over the anglophone population has inspired William Lyon Mackenzie to stage a rebellion in favour of a Republic of Canada.\n\nWill you side with the emerging aristocracy or the radical republicans? Your choice will determine the fate of the colonists, and set a new destiny for all of British North America."
+
+ support_republicanism:0 "Support Republicanism"
+ support_republicanism_desc:0 "The fight for a responsible Canadian government may turn violent. We need all the help we can get."
+ support_republicanism_post:0 "We will declare our desire for a Republic of Canada."
+
+ secure_the_ruling_caste:0 "Secure the Ruling Caste" 
+ secure_the_ruling_caste_desc:0 "These lands are the rightful property of [SCOPE.GetRootScope.GetCountry.GetOverlord.GetRuler.GetHerHis|U] Majesty the [SCOPE.GetRootScope.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]. Rule, Britannia!"
+ secure_the_ruling_caste_post:0 "The established elite will further cement their control over the colonies, with royal assent."
+ 
+ launch_united_rebellion:0 "Launch a United Rebellion"
+ launch_united_rebellion_desc:0 "Our neighbours across the Ottawa river are just as fed up with the colonial 'government' as we are. Together, and with the help of those loyal to the cause, we might be able to achieve our goal of a Republic of Canada."
+ 
+ seize_the_legislature:0 "Seize the Legislature"
+ seize_the_legislature_desc:0 "The colonial hearts, minds, businesses, and military are firmly in the hands of British Royalists. Let's put an end to the progressive demon once and for all." 
+ seize_the_legislature_post:0 "All Canadian colonies will change government type to Monarchy."
+ 
+ united_rebellion:0 "United Canadian Rebellion"

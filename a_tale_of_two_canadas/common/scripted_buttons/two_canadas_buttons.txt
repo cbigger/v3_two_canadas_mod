@@ -1,0 +1,188 @@
+﻿support_republicanism_button = {
+    # HERE WE GO, THIS ONE IS THE SIDE OF THE REBELLION/UNIFICATION
+    # THis first button 
+	name = "support_republicanism"
+	desc = "support_republicanism_desc"
+
+	visible = { 
+	    NOT = { has_variable = canada_sided_with_loyalists }
+		always = yes
+	}
+
+	possible = {
+   		is_at_war = no
+		NOT = { has_modifier = two_canadas_modifier }
+		top_overlord = {
+			relations:root <= relations_threshold:poor
+		}
+		custom_tooltip = {
+			text = two_canadas_seek_sympathy_tt_condition
+			any_country = {
+                NOT = { this = c:GBR }
+                relations:root >= relations_threshold:cordial
+           		has_interest_marker_in_region = region_canada
+				OR = {
+				    has_law = law_type:law_presidential_republic
+                    has_law = law_type:parliamentary_elective
+		        }
+				OR = {
+				    has_law = law_type:law_census_voting
+					has_law = law_type:law_universal_suffrage
+					has_law = law_type:law_wealth_voting
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = two_canadas_seek_sympathy_tt_post_condition
+		add_modifier = { 
+			name = two_canadas_modifier
+			months = long_modifier_time
+	    }
+        custom_tooltip = two_canadas_seek_sympathy_tt_post_condition_one
+    }
+	ai_chance = {
+        base = 100
+	}		 
+}
+
+launch_united_rebellion_button = {
+    name = "launch_united_rebellion"
+	desc = "launch_united_rebellion_desc"
+
+    visible = {
+	    NOT = { has_variable = canada_sided_with_loyalists }
+        always = yes
+    }
+	
+	possible = {
+	    is_at_war = no
+        has_modifier = two_canadas_modifier
+        custom_tooltip = {
+    		text = rebellious_neighbour 
+			any_neighbouring_state = {
+				owner = {
+				    has_modifier = two_canadas_modifier
+					NOT = { THIS = root }
+				    OR = {
+                        THIS = c:ONT
+					    THIS = c:QUE
+				    }
+				    top_overlord = {
+					    THIS = root.top_overlord
+				    }
+			    }
+		    }
+		}
+    }
+
+    effect = {
+        random_neighbouring_state = {
+            limit = {
+		    owner = {
+		        NOT = { THIS = ROOT }
+			    OR = {
+			        THIS = c:ONT
+				    THIS = c:QUE
+			    }
+            }
+			}
+			owner = { save_scope_as = canada_scope }
+		}
+	    custom_tooltip = two_canadas_united_rebellions_ont_tt_post_condition
+		annex_with_incorporation = scope:canada_scope 
+		create_diplomatic_play = {
+		        name = united_rebellion
+
+                target_state = s:STATE_HOME_COUNTIES.region_state:GBR
+						
+			    # s:STATE_ONTARIO.region_state:ONT
+                war = yes
+		     	type = dp_independence
+                
+				add_war_goal = {
+				    holder = c:GBR
+					type = regime_change
+					target_state = root.capital
+				}
+
+			}
+	 }	
+    ai_chance = {
+	    base = 0
+		}
+}
+
+
+# HERE WE HAVE THE SECTION FOR THE STINKY ROYALISTS
+
+#####
+
+secure_the_ruling_caste_button = {
+	name = "secure_the_ruling_caste"
+	desc = "secure_the_ruling_caste_desc"
+
+	visible = { 
+	    always = yes
+        NOT = { has_variable = canada_sided_with_rebellion }
+	}
+
+	possible = {
+   		is_at_war = no
+
+		top_overlord = {
+			relations:root >= relations_threshold:amicable
+		}
+
+		}
+
+	effect = {
+		custom_tooltip = secure_the_ruling_caste_post
+		add_modifier = { 
+			name = canadian_loyalists_modifier
+			months = long_modifier_time
+	    }
+    }
+	ai_chance = {
+        base = 0
+		add = 10
+	}		 
+}
+
+
+seize_the_legislature_button = {
+	name = "seize_the_legislature"
+	desc = "seize_the_legislature_desc"
+
+	visible = { 
+	    always = yes
+        NOT = { has_variable = canada_sided_with_rebellion }
+	}
+
+	possible = {
+   		is_at_war = no
+		NOT = { has_modifier = two_canadas_modifier }
+		top_overlord = {
+		    OR = {
+			   AND = {
+      			   relations:root >= relations_threshold:amicable
+
+				   }
+               relations:root >= relations_threshold:friendly
+ 		    }
+		}
+	}
+
+	effect = {
+		custom_tooltip = seize_the_legislature_post
+		add_modifier = { 
+			name = two_canadas_modifier
+			months = long_modifier_time
+	    }
+    }
+	ai_chance = {
+        base = 0
+		add = 10
+	}		 
+}

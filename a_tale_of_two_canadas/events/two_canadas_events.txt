@@ -1,0 +1,222 @@
+﻿namespace = two_canadas
+
+# A Tale of Two Canadas
+two_canadas.1 = {
+    # Main event, choose a side!
+	type = country_event
+	placement = ROOT
+	title = two_canadas.1.t
+	desc = two_canadas.1.d
+	flavor = two_canadas.1.f
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	
+	trigger = {
+	}
+	
+	immediate = {
+	    root = { save_scope_as = canada_province }
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+			ruler = {
+				save_scope_as = canada_overlord_ruler
+			} 
+		}
+	}
+	option = {
+	    # Side with the rebellion
+		name = two_canadas.1.a
+        default_option = yes
+		set_variable = canada_sided_with_rebellion
+	}
+	option = {
+        # Side with the loyalist oligarchs
+    	name = two_canadas.1.b 
+		set_variable = canada_sided_with_loyalists
+	
+	}
+}
+
+two_canadas.2 = {
+    # Launching the premature solo rebellion
+	type = country_event
+	placement = ROOT
+	title = two_canadas.2.t
+	desc = two_canadas.2.d
+	flavor = two_canadas.2.f
+	event_image = {
+        video = "europenorthamerica_springtime_of_nations"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+	    root = { save_scope_as = canada_province }
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+			ruler = {
+				save_scope_as = canada_overlord_ruler
+			}
+		}
+	}
+	option = {
+		name = two_canadas.2.b
+		create_diplomatic_play = {
+		    name = united_rebellion
+            target_state = s:STATE_HOME_COUNTIES.region_state:GBR				
+		    # s:STATE_ONTARIO.region_state:ONT
+            war = yes
+        	type = dp_independence            
+			add_war_goal = {
+			    holder = c:GBR
+				type = regime_change
+				target_state = root.capital
+			}
+		}
+	}
+	option = {
+		name = two_canadas.2.a
+        default_option = yes
+	}
+}
+
+
+
+two_canadas.3 = {
+    # Support republicanism button!
+	type = country_event
+	placement = ROOT
+
+	title = two_canadas.3.t
+	desc = two_canadas.3.d
+	flavor = two_canadas.3.f
+
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+	    root = { save_scope_as = canada_province }
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+			ruler = {
+				save_scope_as = canada_overlord_ruler
+			}
+		}
+	}
+	option = {
+		name = two_canadas.3.a
+        default_option = yes
+		add_modifier = { 
+			name = two_canadas_modifier
+			months = long_modifier_time
+	    }
+	}
+	option = {
+		name = two_canadas.3.b
+		create_diplomatic_play = {
+		    name = united_rebellion
+            target_state = s:STATE_HOME_COUNTIES.region_state:GBR		
+		    # s:STATE_ONTARIO.region_state:ONT
+            war = yes
+		 	type = dp_independence
+            add_war_goal = {
+		        holder = c:GBR
+				type = regime_change
+				target_state = root.capital
+			}
+		}
+	}
+}
+
+
+two_canadas.4 = {
+    # Launch the rebellion!
+	type = country_event
+	placement = ROOT
+	title = two_canadas.4.t
+	desc = two_canadas.4.d
+	flavor = two_canadas.4.f
+	event_image = {
+        video = "europenorthamerica_springtime_of_nations"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_ military.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+	    root = { save_scope_as = canada_province }
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+			ruler = {
+				save_scope_as = canada_overlord_ruler
+			}
+		}
+	}
+	option = {
+		name = two_canadas.4.b
+		create_diplomatic_play = {
+		        name = united_rebellion
+                target_state = s:STATE_HOME_COUNTIES.region_state:GBR
+                war = yes
+		     	type = dp_independence             
+				add_war_goal = {
+				    holder = c:GBR
+					type = regime_change
+					target_state = root.capital
+				}
+			}
+	}
+	option = {
+		name = two_canadas.4.a
+        default_option = yes
+  	}
+	}
+}
+
+
+two_canadas.9 = {
+	type = country_event
+	placement = ROOT
+
+	title = two_canadas.9.t
+	desc = two_canadas.9.d
+	flavor = two_canadas.9.f
+
+	event_image = {
+        video = "europenorthamerica_springtime_of_nations"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+	    root = { save_scope_as = canada_province }
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+			ruler = {
+				save_scope_as = canada_overlord_ruler
+			}
+		}
+	}
+	option = {
+		name = two_canadas.9.a
+        default_option = yes
+		add_modifier = { 
+			name = two_canadas_modifier
+			months = long_modifier_time
+    	}
+	}
+}

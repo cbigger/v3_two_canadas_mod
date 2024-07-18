@@ -1,0 +1,44 @@
+﻿l_english:
+ DECISION_TOOLTIP_FORMAT:1 "#header $NAME$#!\n$TOOLTIP_DELIMITER$\n$TRIGGER_SUMMARY$\n\nWhen taken:\n$EFFECT_SUMMARY$"
+
+# Seek Repiblicanism ss
+ two_canadas_seek_sympathy:0 "Seek Republican Sympathizers"
+ 
+ two_canadas_seek_sympathy_desc:0 "The British subjects in Upper and Lower Canada dream of a republic with responsible government, and some are prepared to fight for it. We may find sympathy for our cause in countries with republican governments."
+ 
+ two_canadas_seek_sympathy_decision_tooltip:0 "The British subjects in Upper and Lower Canada dream of a republic with responsible government.\nSome are prepared to fight for it. We may find sympathy for our cause in countries with republican governments."
+ 
+ #tooltop ss
+ two_canadas_seek_sympathy_tt_condition:0 "Have cordial or better relations with a republic with an interest in Canada."
+ 
+ two_canadas_seek_sympathy_tt_post_condition:0 "Fighters will heed the call in the form of [Concept('concept_potential_battalions','$concept_potential_conscripts$')]."
+ 
+ two_canadas_seek_sympathy_tt_post_condition_one:0 "Further opportunities to garner support may arise."
+ 
+ 
+# ONTARIO REBELLION 
+ two_canadas_united_rebellions_ont:0 "Launch the Upper Canada Rebellion"
+ 
+ two_canadas_united_rebellions_ont_desc:0 "The Family Compact has gone far enough. It's time to take our stand against the growing tyranny and declare a Republic of Canada."
+ 
+ two_canadas_united_rebellions_ont_decision_tooltip:0 "The British subjects in Upper and Lower Canada dream of a republic with responsible government. Some are prepared to fight for it. We may find sympathy for our cause in countries with republican governments."
+ 
+ two_canadas_united_rebellions_ont_tt_condition:0 "Lower Canada has poor or worse relations with [SCOPE.GetRootScope.GetCountry.GetOverlord.GetName]."
+ 
+ two_canadas_united_rebellions_ont_tt_post_condition:0 "Launchs a surprise Independence war with [SCOPE.GetRootScope.GetCountry.GetOverlord.GetName]"
+
+
+# QUEBEC REBELLION
+ two_canadas_united_rebellions_que:0 "Launch the Patriot War"
+ 
+ two_canadas_united_rebellions_que_desc:0 "Our neighbours across the Ottawa river are just as fed up with the British loyalists as we are. Together, we might be able to achieve our goal of a Republic of Canada."
+ 
+ two_canadas_united_rebellions_que_decision_tooltip:0 "The British subjects in Upper and Lower Canada dream of a republic with responsible government. Some are prepared to fight for it. We may find sympathy for our cause in countries with republican governments."
+ 
+ two_canadas_united_rebellions_que_tt_condition:0 "Upper Canada has poor or worse relations with [SCOPE.GetRootScope.GetCountry.GetOverlord.GetName]."
+ 
+ two_canadas_united_rebellions_que_tt_post_condition:0 "Starts a war with [SCOPE.GetRootScope.GetCountry.GetOverlord.GetName]"
+
+
+# REBELLION
+ rebellious_neighbour:0 "The other Canadian colony is also supporting a rebellion against [SCOPE.GetRootScope.GetCountry.GetOverlord.GetName]"

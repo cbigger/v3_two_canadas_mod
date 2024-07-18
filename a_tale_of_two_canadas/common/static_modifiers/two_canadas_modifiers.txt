@@ -1,0 +1,12 @@
+﻿two_canadas_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_conscription_rate_mult = 3.0 
+}
+canadian_loyalists_modifier = {
+  	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_authority_mult = 0.5    
+}
+clergy_reserves_modifier = {
+  	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+    interest_group_pol_str_mult = 0.40 
+}

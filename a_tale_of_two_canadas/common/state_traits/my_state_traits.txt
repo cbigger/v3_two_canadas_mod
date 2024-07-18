@@ -1,0 +1,19 @@
+﻿state_trait_canadian_terrain = {
+	icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
+
+        disabling_technologies = { "combustion_engine" }
+	
+	modifier = {
+		state_construction_mult = -0.15
+		state_infrastructure_mult = -0.15
+               
+	}
+}
+state_trait_boreal_forests = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.35
+                state_construction_mult = -0.2
+	}
+}
