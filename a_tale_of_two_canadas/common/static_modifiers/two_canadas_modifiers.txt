@@ -10,3 +10,11 @@ clergy_reserves_modifier = {
   	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
     interest_group_pol_str_mult = 0.40 
 }
+tc_chose_rebels_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+    interest_group_pol_str_mult = 0.20
+}
+tc_chose_crown_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+    interest_group_pol_str_mult = 0.20
+}

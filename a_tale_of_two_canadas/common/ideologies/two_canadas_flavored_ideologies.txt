@@ -1,0 +1,355 @@
+﻿ideology_tcloyalist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_Loyalist.dds"
+	character_ideology = yes
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_approve
+		law_presidential_republic = neutral
+		law_parliamentary_republic = disapprove
+		law_theocracy = disapprove
+		law_council_republic = strongly_disapprove
+	}
+	lawgroup_distribution_of_power = {
+		law_oligarchy = strongly_approve
+		law_autocracy = approve
+		law_landed_voting = approve	
+		law_single_party_state = neutral
+		law_wealth_voting = disapprove	
+		law_census_voting = disapprove		
+		law_technocracy = disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+	}
+	lawgroup_economic_system = {	
+		law_interventionism = approve
+		law_laissez_faire = neutral
+		law_agrarianism = disapprove
+		law_traditionalism = disapprove		
+		law_cooperative_ownership = strongly_disapprove		
+		law_command_economy = strongly_disapprove
+	}
+	lawgroup_trade_policy = {
+		law_protectionism = approve
+		law_mercantilism = neutral
+		law_free_trade = disapprove
+		law_isolationism = strongly_disapprove
+	}
+	possible = {
+		owner = {
+			AND = {
+                is_subject = yes			
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+			}
+			NOT = { has_variable = monarchy_stamped_out_var }
+		}
+		scope:interest_group = { 
+			OR = {
+				is_interest_group_type = ig_rural_folk	
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+	}
+	leader_weight = {
+		value = 200
+		# less likely in a theocracy
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_theocracy
+				}
+			}
+			add = -75
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+						has_law = law_type:law_isolationism
+					}
+				}
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_rural_folk
+						}
+				}
+
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+			    owner = {
+			        root.culture = cu:anglo_canadian
+			    }
+			}
+			add = 200
+		}
+		if = {
+			limit = {
+			    owner = {
+			        root.culture = cu:franco_canadian
+			    }
+			}
+			add = -300
+		}
+     }
+}
+
+ideology_tcnationaliste = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_orleanist.dds"
+	# Alloute, gentil Alluootte
+	character_ideology = yes
+	lawgroup_governance_principles = {
+		law_monarchy = approve
+		law_theocracy = approve
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = disapprove
+	}
+ 	lawgroup_distribution_of_power = {
+		law_oligarchy = strongly_approve
+		law_autocracy = approve
+		law_technocracy = disapprove
+		law_landed_voting = approve	
+		law_single_party_state = neutral
+		law_wealth_voting = neutral	
+		law_census_voting = neutral		
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+	}
+	lawgroup_citizenship = {
+		law_racial_segregation = neutral
+		law_cultural_exclusion = approve
+		law_multicultural = approve	
+		law_ethnostate = strongly_disapprove
+		law_national_supremacy = strongly_disapprove
+
+	}
+	lawgroup_economic_system = {	
+		law_agrarianism = approve
+		law_interventionism = approve
+		law_traditionalism = disapprove
+		law_laissez_faire = disapprove
+		law_cooperative_ownership = strongly_disapprove		
+		law_command_economy = strongly_disapprove
+	}
+	lawgroup_trade_policy = {
+		law_protectionism = approve
+		law_mercantilism = neutral
+		law_free_trade = disapprove
+		law_isolationism = strongly_disapprove
+	}
+
+
+	possible = {
+		owner = {
+			AND = {
+				country_has_primary_culture = cu:franco_canadian
+			}
+			NOT = { has_variable = monarchy_stamped_out_var }
+		}
+		scope:interest_group = { 
+			OR = {
+				is_interest_group_type = ig_rural_folk	
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+	}
+	leader_weight = {
+		value = 200
+		# more likely in a theocracy
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_theocracy
+				}
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_monarchy
+				}
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+						has_law = law_type:law_isolationism
+					}
+				}
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_rural_folk
+						}
+				}
+
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+			    scope:interest_group = {
+			        leader = {
+			             this.culture = cu:anglo_canadian
+			        }
+				}
+			}
+			add = -200
+		}
+		if = {
+			limit = {
+			scope:interest_group = {
+			        leader = {
+			             this.culture = cu:franco_canadian
+			        }
+				}
+			}
+			add = 200
+		}
+     }
+
+}
+
+ideology_tclateloyalist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_stratocratic.dds"
+	# Apathetic, Pro-Status Quo anglopcanucks, american immigrants after their civil war.
+	character_ideology = yes
+	lawgroup_governance_principles = {
+		law_presidential_republic = neutral
+		law_monarchy = neutral
+		law_theocracy = neutral
+		law_parliamentary_republic = disapprove
+		law_council_republic = disapprove
+	}
+ 	lawgroup_distribution_of_power = {
+		law_oligarchy = approve
+		law_autocracy = approve
+		law_technocracy = disapprove
+		law_landed_voting = approve	
+		law_single_party_state = neutral
+		law_wealth_voting = neutral	
+		law_census_voting = neutral		
+		law_universal_suffrage = disapprove
+		law_anarchy = strongly_disapprove
+	}
+	lawgroup_citizenship = {
+		law_racial_segregation = neutral
+		law_cultural_exclusion = approve
+		law_multicultural = disapprove
+		law_ethnostate = disapprove
+		law_national_supremacy = disapprove
+
+	}
+	lawgroup_economic_system = {	
+		law_agrarianism = approve
+		law_interventionism = approve
+		law_traditionalism = disapprove
+		law_laissez_faire = disapprove
+		law_cooperative_ownership = strongly_disapprove		
+		law_command_economy = strongly_disapprove
+	}
+	lawgroup_trade_policy = {
+		law_protectionism = approve
+		law_mercantilism = approve
+		law_free_trade = disapprove
+		law_isolationism = strongly_disapprove
+	}
+
+
+	possible = {
+		owner = {
+			AND = {
+                is_subject = yes			
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+			}
+			NOT = { has_variable = monarchy_stamped_out_var }
+		}
+		scope:interest_group = { 
+			OR = {
+				is_interest_group_type = ig_rural_folk	
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+	}
+	leader_weight = {
+		value = 200
+		# reactionary in a theocracy
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_theocracy
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+						has_law = law_type:law_isolationism
+					}
+				}
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_rural_folk
+						}
+				}
+
+			}
+			add = 75
+		}
+		
+		if = {
+			limit = {
+			    scope:interest_group = {
+			        leader = {
+			             this.culture = cu:anglo_canadian
+			        }
+				}
+			}
+			add = -200
+		}
+		if = {
+			limit = {
+			scope:interest_group = {
+			        leader = {
+			             this.culture = cu:franco_canadian
+			        }
+				}
+			}
+			add = 200
+		}
+     }
+
+}

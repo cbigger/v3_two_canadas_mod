@@ -14,10 +14,10 @@
  clergy_reserves_modifier:0 "Selling off the Clergy Reserves"
  
  ideology_tcloyalist:0 "British Loyalist"
- ideology_tcloyalist_desc:0 "#lore This leader supports the British colonial government in Canada."
+ ideology_tcloyalist_desc:0 "#lore This leader supports the British colonial government in Canada and an authoritarian state."
  
  ideology_tcnationaliste:0 "Nationaliste"
- ideology_tcnationaliste_desc:0 "#lore This leader supports a free, francophone Quebec state."
+ ideology_tcnationaliste_desc:0 "#lore This leader holds strong ties to their French Canadian heritage and traditional Catholic values. Vive Quebec!"
  
  ideology_tclateloyalist:0 "Late Loyalist"
- ideology_tclateloyalist_desc:0 "#lore This leader is a descendant of anti-republican American immigrants."
+ ideology_tclateloyalist_desc:0 "#lore This leader supports the status quo in the Canadian colonies. There's no need to get angry, eh?"

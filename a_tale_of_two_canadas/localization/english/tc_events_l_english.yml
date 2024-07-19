@@ -1,12 +1,14 @@
 ﻿l_english:
  two_canadas.1.t:0 "A Tale of Two Canadas"
  two_canadas.1.a:0 "A true north, strong and free."
- two_canadas.1.x:0 "[ROOT.GetCountry.GetName] will side with the Pro-Republican forces."
+ two_canadas.1.x:0 "[ROOT.GetCountry.GetName] will side with the radicals."
  two_canadas.1.b:0 "Long live the [ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]!"
  two_canadas.1.y:0 "[ROOT.GetCountry.GetName] will side with the British Loyalists."
- two_canadas.1.d:0 "Smloop"
- two_canadas.1.f:0 "Smlopp"
- 
+ two_canadas.1.d:0 "The embers of rebellion are burning hot in [ROOT.GetCountry.GetName]. The republican dream is alive and well in the hearts of the colonists."
+ two_canadas.1.f:0 ""The constitution of a country is not the act of its government, nor of any distant authority, but of the people constituting a government suited to their necessities — a constitution contains the principles on which the government shall be established."#lore -William Lyon Mackenzie"
+ tc_chose_rebels_modifier:0 "Sided with Radical Canadians"
+ tc_chose_crown_modifier:0 "Sided with the British Loyalists"
+
  
  two_canadas.9.t:0 "Independence Now!"
  two_canadas.9.a:0 "Our rebellion grows."

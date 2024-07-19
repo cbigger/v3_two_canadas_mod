@@ -1,0 +1,139 @@
+﻿two_canadas_united_rebellions_ont = {
+    # Decision is viewable if
+	is_shown = {
+        # We are Upper Lower Canada
+        root = c:ONT
+        # Both Canadas exist
+        exists = c:ONT
+        exists = c:QUE
+                                   
+        # We've something to rebel against and someone with
+		is_subject = yes
+    	any_neighbouring_state = {
+			owner = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		top_overlord = {
+			relations:root <= relations_threshold:poor
+		}
+        NOT = { ig:ig_intelligentsia = {
+				     is_marginal = yes
+					 }
+				}
+    	custom_tooltip = {
+			text = two_canadas_united_rebellions_ont_tt_condition
+            any_neighbouring_state = {
+				owner = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				THIS = c:QUE
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+          }
+		}
+	}
+	when_taken = {
+		custom_tooltip = {
+		    text = two_canadas_united_rebellions_ont_tt_post_condition
+			trigger_event = { id = two_canadas.3 days = 0 popup = yes }		
+        }
+	}
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = nationalism
+			add = 100
+		}		
+	}
+}
+
+two_canadas_united_rebellions_que = {
+    # Decision is viewable if
+	is_shown = {
+        # We are Lower Canada
+        root = c:QUE
+        # Both Canadas exist
+        exists = c:ONT
+        exists = c:QUE
+                                   
+        # We've something to rebel against and someone with
+		is_subject = yes
+    	any_neighbouring_state = {
+			owner = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_subject = yes
+				NOT = { THIS = ROOT }
+                THIS = c:ONT
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		top_overlord = {
+			relations:root <= relations_threshold:poor
+		}
+        NOT = { ig:ig_intelligentsia = {
+				     is_marginal = yes
+					 }
+				}
+    	custom_tooltip = {
+			text = two_canadas_united_rebellions_que_tt_condition
+            any_neighbouring_state = {
+				owner = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+          }
+		}
+	}
+	
+	when_taken = {
+		custom_tooltip = {
+		    text = two_canadas_united_rebellions_que_tt_post_condition
+			trigger_event = { id = two_canadas.3 days = 0 popup = yes }
+			}
+
+        }
+	
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = nationalism
+			add = 100
+		}		
+	}
+}

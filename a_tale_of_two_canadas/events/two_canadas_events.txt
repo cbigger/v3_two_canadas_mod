@@ -32,12 +32,29 @@ two_canadas.1 = {
 		name = two_canadas.1.a
         default_option = yes
 		set_variable = canada_sided_with_rebellion
+        custom_tooltip = {
+		    text = two_canadas.1.x
+		}
+		ig:ig_intelligentsia = { 
+			add_modifier = {
+				name = tc_chose_rebels_modifier
+				months = short_modifier_time
+			}
+		}        
 	}
 	option = {
         # Side with the loyalist oligarchs
-    	name = two_canadas.1.b 
+    	name = two_canadas.1.b
 		set_variable = canada_sided_with_loyalists
-	
+	    custom_tooltip = {
+		    text = two_canadas.1.y
+		}
+		ig:ig_landowners = { 
+			add_modifier = {
+				name = tc_chose_crown_modifier
+				months = short_modifier_time
+			}
+		}
 	}
 }
 
