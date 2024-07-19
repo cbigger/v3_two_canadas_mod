@@ -58,5 +58,20 @@
 				charismatic
 			}
 		}
+		create_character = {
+			first_name = "John_Kinder"
+			last_name = "Labatt"
+			historical = yes
+			culture = cu:anglo_canadian # Born in Ireland
+			age = 33
+			dna = dna_william_lyon_mackenzie
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_market_liberal
+			traits = {
+                ambitious
+			}
+		}
+		
 	}
 }

@@ -10,7 +10,7 @@
 			age = 60
 			dna = dna_archibald_acheson
 			interest_group = ig_landowners
-			ideology = ideology_moderate
+			ideology = ideology_tcloyalist
 			traits = {
 				tactful
 			}
@@ -27,6 +27,21 @@
 			ideology = ideology_radical
 			traits = {
 				ambitious
+			}
+		}
+			create_character = {
+			first_name = "John"
+			last_name = "Molson_Jr"
+			historical = yes
+			culture = cu:anglo_canadian # English speaking montrealler
+			age = 49
+			dna = dna_william_lyon_mackenzie
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_tcloyalist
+			traits = {
+                ambitious
+				innovative
 			}
 		}
 	}

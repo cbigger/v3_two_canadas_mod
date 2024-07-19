@@ -332,8 +332,8 @@ conservative_party = {
 					exists = c:CAN
 					THIS = c:CAN
 				}
-			}a
-                        # ADDED BY MOD CRM
+			}
+            # ADDED BY MOD CRM
 			triggered_desc = {
 				desc = party_family_compact
 				trigger = {

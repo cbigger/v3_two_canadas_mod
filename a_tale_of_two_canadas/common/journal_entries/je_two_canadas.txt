@@ -1,5 +1,6 @@
 ﻿# JOURNAL ENTRY FOR TWO CANADAS
 je_two_canadas = {
+    # Supporting the rebellion
     icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	group = je_group_historical_content
@@ -9,7 +10,6 @@ je_two_canadas = {
     scripted_button = launch_united_rebellion_button
 	scripted_button = seize_the_legislature_button
 	
-	title = je_two_canadas
 	is_shown_when_inactive = {
         OR = { 
 		    root = c:ONT
@@ -34,7 +34,6 @@ je_two_canadas = {
 			}
 		}
 	}
-
 	possible = {
 		top_overlord = {
 			relations:root <= relations_threshold:poor
@@ -54,7 +53,6 @@ je_two_canadas = {
             }       
 		}
 	}
-
     immediate = {
         trigger_event = { id = two_canadas.1 days = 0 popup = yes }
     }
@@ -79,12 +77,9 @@ je_two_canadas = {
         }
     }
 	on_fail = {
-	    trigger = { id = two_canadas.4	days = 1 popup = yes }
+	    trigger_event = { id = two_canadas.9	days = 1 popup = yes }
 		    
 		}
-	}
-
-
 	weight = 100
 	should_be_pinned_by_default = yes
 }

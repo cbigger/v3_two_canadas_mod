@@ -5,6 +5,19 @@
  party_patriote_party:0 "Patriote Party"
  party_reformers_party:0 "Reformers
  
+ John_Kinder:0 "John Kinder"
+ Molson_Jr:0 "Molson Jr"
+ Labatt:0 "Labatt"
+ 
  two_canadas_modifier:0 "Supported by Foreign Freedom Fighters"
  canadian_loyalists_modifier:0 "Loyalists Rewarded with Arbitrary Power"
  clergy_reserves_modifier:0 "Selling off the Clergy Reserves"
+ 
+ ideology_tcloyalist:0 "British Loyalist"
+ ideology_tcloyalist_desc:0 "#lore This leader supports the British colonial government in Canada."
+ 
+ ideology_tcnationaliste:0 "Nationaliste"
+ ideology_tcnationaliste_desc:0 "#lore This leader supports a free, francophone Quebec state."
+ 
+ ideology_tclateloyalist:0 "Late Loyalist"
+ ideology_tclateloyalist_desc:0 "#lore This leader is a descendant of anti-republican American immigrants."

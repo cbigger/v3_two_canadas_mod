@@ -3,7 +3,7 @@
  two_canadas.1.a:0 "A true north, strong and free."
  two_canadas.1.x:0 "[ROOT.GetCountry.GetName] will side with the Pro-Republican forces."
  two_canadas.1.b:0 "Long live the [ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]!"
- two_canadas.1.y.0 "[ROOT.GetCountry.GetName] will side with the British Loyalists. This "
+ two_canadas.1.y:0 "[ROOT.GetCountry.GetName] will side with the British Loyalists."
  two_canadas.1.d:0 "Smloop"
  two_canadas.1.f:0 "Smlopp"
  

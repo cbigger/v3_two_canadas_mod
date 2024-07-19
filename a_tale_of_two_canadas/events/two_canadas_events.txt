@@ -151,7 +151,7 @@ two_canadas.4 = {
         video = "europenorthamerica_springtime_of_nations"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_ military.dds"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	duration = 3
 	trigger = {
 	}
@@ -182,11 +182,49 @@ two_canadas.4 = {
 		name = two_canadas.4.a
         default_option = yes
   	}
+}
+
+
+
+two_canadas.8 = {
+    # Failed the republic
+	type = country_event
+	placement = ROOT
+
+	title = two_canadas.8.t
+	desc = two_canadas.8.d
+	flavor = two_canadas.8.f
+
+	event_image = {
+        video = "europenorthamerica_springtime_of_nations"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+	    root = { save_scope_as = canada_province }
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+			ruler = {
+				save_scope_as = canada_overlord_ruler
+			}
+		}
+	}
+	option = {
+		name = two_canadas.8.a
+        default_option = yes
+		add_modifier = { 
+			name = two_canadas_modifier
+			months = long_modifier_time
+    	}
 	}
 }
 
 
 two_canadas.9 = {
+    # Failed the monarchy
 	type = country_event
 	placement = ROOT
 
